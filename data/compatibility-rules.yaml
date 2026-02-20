@@ -1,0 +1,331 @@
+# 配伍禁忌与安全性数据库
+# 版本: V2.1
+# 包含: 十八反、十九畏、妊娠禁忌、毒性成分
+
+---
+metadata:
+  version: "2.1"
+  last_updated: "2025-02-21"
+  description: "中医配伍禁忌与安全性数据，配合药食同源目录使用"
+
+---
+# 十八反
+# 本草明言十八反，半蒌贝蔹及攻乌，藻戟遂芫俱战草，诸参辛芍叛藜芦
+
+eighteen_contraindications:
+  name: "十八反"
+  rhyme: "本草明言十八反，半蒌贝蔹及攻乌，藻戟遂芫俱战草，诸参辛芍叛藜芦"
+  severity: "致命"
+  note: "绝对禁止配伍，可能产生剧毒"
+  
+  rules:
+    - group: "乌头类反半夏、瓜蒌、贝母、白蔹、白及"
+      herbs_a: ["乌头", "附子", "天雄", "草乌"]
+      herbs_b: ["半夏", "瓜蒌", "贝母", "白蔹", "白及"]
+      mechanism: "毒性增强，产生心脏毒性"
+      v21_note: "本配方不含乌头类，安全"
+      
+    - group: "甘草反甘遂、大戟、海藻、芫花"
+      herbs_a: ["甘草"]
+      herbs_b: ["甘遂", "大戟", "海藻", "芫花"]
+      mechanism: "甘草酸与以上成分产生毒性复合物"
+      v21_important: "⚠️ 本配方含甘草，需检查以上成分"
+      v21_check: "确认配方不含甘遂、大戟、海藻、芫花"
+      
+    - group: "藜芦反人参、党参、丹参、玄参、苦参、细辛、白芍、赤芍"
+      herbs_a: ["藜芦"]
+      herbs_b: ["人参", "党参", "丹参", "玄参", "苦参", "细辛", "白芍", "赤芍"]
+      mechanism: "增强毒性，可能致命"
+      v21_check: "确认配方不含藜芦"
+
+---
+# 十九畏
+# 硫黄原是火中精，朴硝一见便相争...
+
+nineteen_fears:
+  name: "十九畏"
+  rhyme: "硫黄原是火中精，朴硝一见便相争。水银莫与砒霜见，狼毒最怕密陀僧。巴豆性烈最为上，偏与牵牛不顺情。丁香莫与郁金见，牙硝难合京三棱。川乌草乌不顺犀，人参最怕五灵脂。官桂善能调冷气，若逢石脂便相欺"
+  severity: "高"
+  note: "不宜配伍，可能降低药效或产生毒性"
+  
+  rules:
+    - herb: "硫黄"
+      fears: "朴硝"
+      v21_check: "一般食品不用硫黄"
+      
+    - herb: "水银"
+      fears: "砒霜"
+      v21_check: "食品中禁用"
+      
+    - herb: "狼毒"
+      fears: "密陀僧"
+      v21_check: "食品中禁用"
+      
+    - herb: "巴豆"
+      fears: "牵牛子"
+      v21_check: "巴豆不在药食同源目录"
+      
+    - herb: "丁香"
+      fears: "郁金"
+      v21_check: "本配方不含郁金"
+      
+    - herb: "牙硝"
+      fears: "三棱"
+      v21_check: "一般食品不用牙硝"
+      
+    - herb: "川乌、草乌"
+      fears: "犀角"
+      note: "犀角已禁用，现用水牛角"
+      v21_check: "乌头类不在药食同源目录"
+      
+    - herb: "人参/党参/黄芪"
+      fears: "五灵脂"
+      v21_important: "⚠️ 本配方含黄芪，需避免五灵脂"
+      v21_check: "确认配方不含五灵脂"
+      
+    - herb: "官桂"
+      fears: "赤石脂"
+      v21_check: "一般食品不用赤石脂"
+
+---
+# 妊娠禁忌
+
+pregnancy_safety:
+  name: "妊娠用药安全"
+  note: "孕妇用药需特别谨慎"
+  
+  categories:
+    - level: "绝对禁用"
+      risk: "可能导致流产或胎儿畸形"
+      herbs:
+        - name: "郁李仁"
+          reason: "破血润肠，可能导致子宫收缩"
+          v21_important: "🔴 本配方含郁李仁，孕妇绝对禁用"
+          label_required: "孕妇禁用"
+          
+        - name: "桃仁"
+          reason: "破血祛瘀，堕胎"
+          note: "即使V2.1已替换，仍需警惕其他配方"
+          
+        - name: "红花"
+          reason: "活血通经，堕胎"
+          v21_alternative: "如需替换桃仁，注意红花也禁用于孕妇"
+          
+        - name: "西红花（藏红花）"
+          reason: "活血力极强，堕胎"
+          v21_note: "2019年新增，孕妇禁用"
+          
+        - name: "三棱"
+          reason: "破血行气"
+          note: "不在药食同源目录"
+          
+        - name: "莪术"
+          reason: "破血行气"
+          note: "不在药食同源目录"
+          
+        - name: "水蛭"
+          reason: "破血逐瘀"
+          note: "不在药食同源目录"
+          
+        - name: "虻虫"
+          reason: "破血逐瘀"
+          note: "不在药食同源目录"
+          
+    - level: "慎用"
+      risk: "可能影响胎儿，需医师指导"
+      herbs:
+        - name: "当归"
+          reason: "活血，可能动胎气"
+          v21_note: "如需替换桃仁，孕妇慎用当归"
+          
+        - name: "大黄"
+          reason: "泻下攻积"
+          note: "不在药食同源目录"
+          
+        - name: "番泻叶"
+          reason: "泻下导滞"
+          note: "不在药食同源目录"
+          
+        - name: "芦荟"
+          reason: "泻下"
+          note: "需控制剂量"
+          
+    - level: "可用（适量）"
+      herbs:
+        - name: "山药"
+          note: "健脾益肾，安全"
+        - name: "大枣"
+          note: "补血安神，安全"
+        - name: "枸杞"
+          note: "滋补肝肾，安全"
+
+---
+# 毒性成分数据库
+
+toxic_components:
+  name: "药食同源原料中的毒性成分"
+  note: "在限量范围内使用是安全的，但需控制"
+  
+  herbs_with_toxicity:
+    - name: "郁李仁"
+      toxic_component: "苦杏仁苷"
+      content: "0.5%"
+      risk: "水解产生氢氰酸（剧毒）"
+      v21_important: "🔴 本配方关键风险点"
+      
+      hydrolysis_conditions:
+        - "温度 > 80℃（酶解）"
+        - "酸性环境（胃酸）"
+        - "长时间浸泡"
+        
+      control_measures:
+        - "提取温度≤80℃"
+        - "添加碳酸钙0.5%中和酸性"
+        - "喷雾干燥短时高温（180℃/10s灭活酶）"
+        - "饭后服用（减少胃酸作用）"
+        
+      detection:
+        item: "氰化物残留"
+        standard: "≤1.0mg/kg"
+        method: "GB/T 5009.36"
+        frequency: "每批次必检"
+        
+      symptoms_of_poisoning:
+        - "头痛、头晕"
+        - "恶心、呕吐"
+        - "呼吸困难"
+        - "严重者可致死"
+        
+      emergency_treatment:
+        - "立即就医"
+        - "洗胃"
+        - "亚硝酸钠+硫代硫酸钠解毒"
+        
+    - name: "苦杏仁（甜杏仁安全）"
+      toxic_component: "苦杏仁苷"
+      content: "3%（远高于郁李仁）"
+      risk: "高毒性"
+      note: "甜杏仁含量低（0.1%），可食用"
+      v21_check: "确认使用甜杏仁，非苦杏仁"
+      
+    - name: "甘草"
+      toxic_component: "甘草酸"
+      content: "2-10%（因产地而异）"
+      risk: "假性醛固酮增多症"
+      v21_important: "⚠️ 本配方关键控制点"
+      
+      max_daily_intake:
+        glycyrrhizin: "≤100mg/天"
+        v21_calculation: "2.5g甘草×5%=125mg/包"
+        v21_limit: "每日1包安全，2包需医师指导"
+        
+      side_effects:
+        - "高血压"
+        - "低钾血症"
+        - "水肿"
+        - "头痛"
+        
+      contraindications:
+        - "高血压未控制者"
+        - "低钾血症患者"
+        - "肾功能不全者"
+        - "正在服用利尿剂者"
+        - "正在服用地高辛者"
+        
+      monitoring:
+        - "血压（每月）"
+        - "血钾（每3个月）"
+        - "肌酐（每3个月）"
+        
+    - name: "何首乌"
+      note: "不在本配方中，但常见"
+      toxic_component: "蒽醌类"
+      risk: "肝损伤"
+      note: "生首乌毒性大，制首乌较安全"
+      
+    - name: "白果"
+      toxic_component: "银杏毒素"
+      risk: "神经系统毒性"
+      limit: "儿童≤10粒/天，成人≤15粒/天"
+
+---
+# V2.1 安全检查清单
+
+v21_safety_checklist:
+  pre_formulation:
+    - "确认所有成分在药食同源目录"
+    - "检查十八反配伍"
+    - "检查十九畏配伍"
+    - "识别毒性成分"
+    
+  formulation_design:
+    - "计算甘草酸含量"
+    - "确认苦杏仁苷风险控制措施"
+    - "标注孕妇禁用（如含郁李仁、红花）"
+    - "标注每日限量（如甘草酸≥100mg/包）"
+    
+  process_design:
+    - "提取温度≤80℃（含苦杏仁苷成分）"
+    - "添加碳酸钙0.5%（中和酸性）"
+    - "检测氰化物残留≤1.0mg/kg"
+    - "检测甘草酸含量"
+    
+  labeling:
+    - "标注'孕妇禁用'（醒目位置）"
+    - "标注'每日不超过1包'（如需要）"
+    - "标注'长期服用请咨询医师'"
+    - "标注'低血压、低钾血症患者禁用'（如含甘草）"
+    
+  post_marketing:
+    - "监测用户反馈（不良反应）"
+    - "定期检测原料质量"
+    - "建立召回机制"
+
+---
+# 标签警示语模板
+
+warning_labels:
+  pregnancy:
+    text: "孕妇禁用"
+    font_size: "≥3mm"
+    color: "红色"
+    position: "标签正面醒目位置"
+    background: "白色或浅色"
+    
+  daily_limit:
+    text: "每日不超过1包"
+    condition: "甘草酸≥100mg/包"
+    font_size: "≥2.5mm"
+    
+  long_term_use:
+    text: "长期服用请咨询医师"
+    condition: "含甘草、郁李仁等成分"
+    
+  contraindications:
+    text: "低血压、低钾血症患者禁用"
+    condition: "含甘草"
+    
+  pediatric:
+    text: "儿童、哺乳期妇女慎用"
+    condition: "含活血成分"
+
+---
+# 急救信息
+
+emergency_info:
+  poisoning_symptoms:
+    - "恶心、呕吐"
+    - "腹痛、腹泻"
+    - "头晕、头痛"
+    - "心悸、呼吸困难"
+    - "意识模糊"
+    
+  emergency_steps:
+    - "立即停止服用"
+    - "保留产品样本"
+    - "拨打120急救"
+    - "告知医生服用成分"
+    
+  poison_control_center:
+    phone: "400-161-9911"  # 中国中毒控制热线
+    note: "24小时服务"

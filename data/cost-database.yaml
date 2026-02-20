@@ -1,0 +1,489 @@
+# 成本数据库
+# 版本: V2.1
+# 更新频率: 每月
+# 最后更新: 2025-02-21
+
+---
+metadata:
+  version: "2.1"
+  last_updated: "2025-02-21"
+  price_unit: "元/kg"
+  currency: "人民币"
+  note: "价格为市场均价，仅供参考，实际采购以供应商报价为准"
+
+---
+# 原料价格
+
+raw_materials:
+  # 种子类
+  seeds:
+    - name: "酸枣仁"
+      price_range: [70, 90]
+      average: 80
+      trend: "上涨"
+      season: "秋季产新"
+      origin: "河北、山西、陕西"
+      quality_grades:
+        - grade: "特级"
+          price: 90
+          standard: "颗粒饱满，无杂质"
+        - grade: "一级"
+          price: 80
+          standard: "本配方采用"
+        - grade: "二级"
+          price: 70
+      v21_note: "本配方用量15g，原料成本1.2元"
+      suppliers_recommended: 3
+      
+    - name: "郁李仁"
+      price_range: [50, 70]
+      average: 60
+      trend: "稳定"
+      season: "夏季产新"
+      origin: "东北、内蒙古"
+      v21_note: "V2.1替换桃仁，价格更低，注意质量控制"
+      suppliers_recommended: 2
+      
+    - name: "火麻仁"
+      price_range: [25, 35]
+      average: 30
+      trend: "稳定"
+      
+    - name: "决明子"
+      price_range: [12, 18]
+      average: 15
+      trend: "稳定"
+      
+    - name: "杏仁"
+      note: "甜杏仁"
+      price_range: [30, 45]
+      average: 38
+      trend: "波动"
+      v21_warning: "区分甜杏仁（可食用）和苦杏仁（高毒性）"
+      
+    - name: "桃仁"
+      note: "⚠️ 不在药食同源目录"
+      price_range: [40, 60]
+      average: 50
+      v21_status: "已替换为郁李仁"
+      
+  # 根茎类
+  roots:
+    - name: "黄芪"
+      price_range: [40, 60]
+      average: 50
+      trend: "波动"
+      season: "秋季产新"
+      origin: "山西、内蒙古（最佳）"
+      quality_grades:
+        - grade: "野生"
+          price: 100
+        - grade: "仿野生"
+          price: 60
+        - grade: "栽培（本配方用）"
+          price: 50
+      v21_note: "本配方用量15g，原料成本0.75元"
+      
+    - name: "甘草"
+      price_range: [15, 25]
+      average: 20
+      trend: "稳定"
+      origin: "新疆、内蒙古、宁夏"
+      quality_grades:
+        - grade: "野生"
+          price: 40
+        - grade: "栽培（本配方用）"
+          price: 20
+      v21_note: "甘草酸含量2-10%，V2.1用量2.5g"
+      
+    - name: "当归"
+      price_range: [40, 80]
+      average: 60
+      trend: "上涨"
+      origin: "甘肃岷县（最佳）"
+      v21_alternative: "可用于替换桃仁，补血活血"
+      
+    - name: "党参"
+      price_range: [50, 80]
+      average: 65
+      trend: "上涨"
+      note: "2023年新增"
+      
+    - name: "地黄"
+      price_range: [20, 35]
+      average: 28
+      trend: "稳定"
+      note: "2024年新增"
+      
+    - name: "麦冬"
+      price_range: [60, 100]
+      average: 80
+      trend: "上涨"
+      note: "2024年新增，四川产最佳"
+      
+  # 果实类
+  fruits:
+    - name: "山楂"
+      price_range: [12, 20]
+      average: 16
+      trend: "季节波动"
+      season: "秋季产新"
+      
+    - name: "枸杞"
+      price_range: [40, 100]
+      average: 60
+      trend: "稳定"
+      origin: "宁夏（最佳）、青海、新疆"
+      quality_grades:
+        - grade: "宁夏特级"
+          price: 100
+        - grade: "宁夏一级"
+          price: 60
+        - grade: "青海货"
+          price: 40
+          
+    - name: "龙眼肉"
+      price_range: [40, 80]
+      average: 60
+      trend: "稳定"
+      origin: "福建、广东、广西"
+      
+    - name: "大枣"
+      price_range: [15, 40]
+      average: 25
+      trend: "稳定"
+      origin: "新疆、山西、河北"
+      
+    - name: "桑椹"
+      price_range: [30, 60]
+      average: 45
+      trend: "上涨"
+      
+  # 香辛料
+  spices:
+    - name: "陈皮"
+      price_range: [30, 100]
+      average: 50
+      trend: "上涨"
+      note: "年份越久越贵，3年陈够用"
+      v21_note: "V2.1用量减至3g，降低成本"
+      
+    - name: "肉桂"
+      price_range: [20, 40]
+      average: 30
+      trend: "稳定"
+      
+    - name: "砂仁"
+      price_range: [150, 300]
+      average: 200
+      trend: "波动大"
+      note: "进口货价格波动大"
+      
+  # 花类
+  flowers:
+    - name: "菊花"
+      price_range: [30, 150]
+      average: 60
+      trend: "稳定"
+      varieties:
+        - name: "杭白菊"
+          price: 60
+        - name: "贡菊"
+          price: 100
+        - name: "滁菊"
+          price: 80
+        - name: "亳菊"
+          price: 40
+          
+    - name: "金银花"
+      price_range: [80, 200]
+      average: 120
+      trend: "波动大"
+      note: "需求量大，价格波动"
+      
+  # 草药/其他
+  others:
+    - name: "茯苓"
+      price_range: [25, 50]
+      average: 35
+      trend: "稳定"
+      origin: "云南、安徽"
+      
+    - name: "葛根"
+      price_range: [15, 30]
+      average: 22
+      trend: "稳定"
+      
+    - name: "薏米"
+      price_range: [12, 20]
+      average: 16
+      trend: "稳定"
+      
+    - name: "山药"
+      price_range: [15, 35]
+      average: 25
+      trend: "稳定"
+      origin: "河南焦作（铁棍山药最佳）"
+
+---
+# 辅料价格
+
+excipients:
+  - name: "赤藓糖醇"
+    price: 15  # 元/kg
+    usage: "甜味剂，V2.1配方用5%"
+    cost_per_pack: 0.023  # 每包成本
+    
+  - name: "甜菊糖苷"
+    price: 120
+    usage: "高倍甜味剂，V2.1配方用0.05%"
+    cost_per_pack: 0.002
+    
+  - name: "罗汉果提取物"
+    price: 80
+    usage: "天然甜味剂，V2.1配方用1%"
+    cost_per_pack: 0.024
+    
+  - name: "柠檬酸"
+    price: 8
+    usage: "酸味剂，V2.1配方用0.3%"
+    cost_per_pack: 0.002
+    
+  - name: "碳酸钙"
+    price: 5
+    usage: "V2.1新增，中和酸性，用0.5%"
+    cost_per_pack: 0.002
+    note: "关键辅料，防苦杏仁苷水解"
+    
+  - name: "麦芽糊精"
+    price: 8
+    usage: "填充剂，V2.1配方用20%"
+    cost_per_pack: 0.048
+    
+  - name: "维生素E"
+    price: 50
+    usage: "抗氧化剂，防油脂氧化，用0.05%"
+    cost_per_pack: 0.008
+    
+  - name: "迷迭香提取物"
+    price: 200
+    usage: "天然抗氧化剂，用0.02%"
+    cost_per_pack: 0.012
+    
+  - name: "桂花提取物"
+    price: 150
+    usage: "香精，V2.1配方用0.1%"
+    cost_per_pack: 0.045
+    
+  - name: "包装材料"
+    inner_bag: 0.15  # 铝箔袋/个
+    outer_box: 0.35  # 纸盒/个
+    label: 0.05      # 标签/个
+    desiccant: 0.03  # 干燥剂/包
+    total_per_pack: 0.58
+
+---
+# 加工费用
+
+processing_costs:
+  extraction:
+    water_extraction: 15  # 水提，元/kg
+    alcohol_extraction: 25  # 醇提，元/kg
+    supercritical_co2: 80  # 超临界萃取，元/kg
+    
+  concentration:
+    vacuum_evaporation: 10  # 真空浓缩，元/kg
+    
+  drying:
+    spray_drying: 20  # 喷雾干燥，元/kg
+    vacuum_drying: 30  # 真空干燥，元/kg
+    freeze_drying: 150  # 冷冻干燥，元/kg
+    
+  granulation:
+    wet_granulation: 8  # 湿法制粒，元/kg
+    dry_granulation: 5  # 干法制粒，元/kg
+    
+  packaging:
+    sachet_filling: 0.05  # 袋装，元/包
+    canning: 0.10  # 罐装，元/罐
+    
+  quality_control:
+    inspection_fee: 0.03  # 质检分摊，元/包
+
+---
+# 检测费用
+
+testing_costs:
+  routine_tests:
+    sensory: 50      # 感官检测
+    moisture: 80    # 水分检测
+    total_bacteria: 100  # 菌落总数
+    mold_yeast: 80  # 霉菌酵母
+    coliform: 100   # 大肠菌群
+    subtotal: 410
+    
+  safety_tests:
+    heavy_metals: 600      # 重金属（铅砷镉汞）
+    pesticides: 800        # 农残
+    aflatoxin: 400         # 黄曲霉毒素
+    subtotal: 1800
+    
+  v21_special_tests:  # V2.1新增必检
+    cyanide: 500           # 氰化物（郁李仁）
+    glycyrrhizin: 400      # 甘草酸（甘草）
+    subtotal: 900
+    
+  total_per_batch: 3110   # 合计/批次
+  
+  batch_size_example: 5000  # 假设5000包/批次
+  cost_per_pack: 0.622      # 分摊到每包
+
+---
+# 完整成本核算示例（枣仁安神颗粒 V2.1）
+
+cost_example:
+  product: "枣仁安神颗粒"
+  version: "V2.1"
+  batch_size: 5000  # 包
+  pack_size: 3  # g/包
+  
+  raw_materials:
+    - item: "酸枣仁"
+      dosage_per_pack: 0.45  # g
+      price_per_kg: 80
+      cost_per_pack: 0.036
+      
+    - item: "郁李仁"
+      dosage_per_pack: 0.24
+      price_per_kg: 60
+      cost_per_pack: 0.014
+      note: "V2.1替换桃仁，成本更低"
+      
+    - item: "黄芪"
+      dosage_per_pack: 0.45
+      price_per_kg: 50
+      cost_per_pack: 0.023
+      
+    - item: "陈皮"
+      dosage_per_pack: 0.09
+      price_per_kg: 50
+      cost_per_pack: 0.005
+      note: "V2.1减至3g，成本降低"
+      
+    - item: "山楂"
+      dosage_per_pack: 0.30
+      price_per_kg: 16
+      cost_per_pack: 0.005
+      
+    - item: "甘草"
+      dosage_per_pack: 0.075
+      price_per_kg: 20
+      cost_per_pack: 0.002
+      note: "V2.1减至2.5g，成本降低"
+      
+    - item: "碳酸钙"
+      dosage_per_pack: 0.015
+      price_per_kg: 5
+      cost_per_pack: 0.0001
+      note: "V2.1新增"
+      
+    - item: "其他辅料"
+      cost_per_pack: 0.077
+      
+    subtotal: 0.162
+    
+  processing:
+    extraction: 0.045
+    drying: 0.060
+    granulation: 0.024
+    packaging: 0.058
+    qc: 0.015
+    subtotal: 0.202
+    
+  testing:
+   分摊: 0.622
+    
+  other:
+    transport: 0.150
+    loss_3pct: 0.011
+    contingency_5pct: 0.057
+    subtotal: 0.218
+    
+  total_cost_per_pack: 1.204
+  
+  pricing:
+    factory_price: 2.00  # 出厂价，毛利40%
+    retail_price: 3.50   # 零售价，建议3-4元/包
+    
+  annual_projection:
+    monthly_sales: 10000  # 包
+    annual_sales: 120000
+    annual_revenue: 420000  # 按零售价3.5元
+    annual_cost: 144480   # 按成本1.2元
+    annual_profit: 275520
+    
+  v21_cost_optimization:
+    - "郁李仁替换桃仁，原料成本↓0.03元/包"
+    - "陈皮从6g减至3g，原料成本↓0.003元/包"
+    - "甘草从3g减至2.5g，原料成本↓0.001元/包"
+    - "碳酸钙增加0.0001元/包（必要安全投入）"
+    - "合计节省: 0.034元/包（约3%）"
+
+---
+# 成本敏感性分析
+
+sensitivity_analysis:
+  factors:
+    - factor: "酸枣仁价格上涨20%"
+      impact: "+0.007元/包"
+      mitigation: "提前储备3个月库存"
+      
+    - factor: "郁李仁价格上涨20%"
+      impact: "+0.003元/包"
+      mitigation: "寻找多家供应商"
+      
+    - factor: "检测费用增加"
+      impact: "+0.1元/包（如增加全检频次）"
+      mitigation: "合理规划检测批次"
+      
+    - factor: "代工费上涨10%"
+      impact: "+0.02元/包"
+      mitigation: "签订长期合作协议"
+      
+  overall_impact:
+    worst_case: "+15%成本（约+0.18元/包）"
+    best_case: "-10%成本（约-0.12元/包）"
+
+---
+# 供应商管理建议
+
+supplier_management:
+  strategy: "3+1策略"
+  description: "3家主供应商+1家备用供应商"
+  
+  selection_criteria:
+    - "持有GMP证书"
+    - "有药食同源原料生产经验"
+    - "能提供质检报告（COA）"
+    - "价格合理"
+    - "交货及时"
+    
+  audit_frequency: "每年1次现场审计"
+  
+  key_suppliers_recommended:
+    酸枣仁:
+      regions: ["河北邢台", "山西晋城", "陕西延安"]
+      
+    郁李仁:
+      regions: ["黑龙江", "内蒙古"]
+      note: "V2.1新增采购需求"
+      
+    黄芪:
+      regions: ["山西浑源", "内蒙古武川"]
+      note: "恒山黄芪最佳"
+      
+  cost_saving_tips:
+    - "秋季产新时大量采购，锁定低价"
+    - "与供应商签订年度协议，获取折扣"
+    - "联合其他产品共同采购，增加议价能力"
+    - "建立原料储备，应对价格波动"

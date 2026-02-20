@@ -1,0 +1,476 @@
+# 《药食同源目录》Mini 版
+# 版本: 2024年8月（最新）
+# 总数: 106种
+# 来源: 国家卫健委官方公告
+
+---
+metadata:
+  version: "2024-08"
+  total_count: 106
+  sources:
+    - name: "2002年基础名单"
+      date: "2002-03-11"
+      file: "卫法监发〔2002〕51号"
+      count: 87
+    - name: "2019年新增"
+      date: "2019-11-25"
+      file: "2019年第8号公告"
+      count: 6
+    - name: "2023年新增"
+      date: "2023-11-09"
+      file: "2023年第9号公告"
+      count: 9
+    - name: "2024年新增"
+      date: "2024-08-26"
+      file: "2024年第4号公告"
+      count: 4
+
+---
+# 2002年基础名单（87种）
+herbs_2002:
+  - id: 1
+    name: "丁香"
+    category: "香辛料"
+  - id: 2
+    name: "八角茴香"
+    category: "香辛料"
+  - id: 3
+    name: "刀豆"
+    category: "豆类"
+  - id: 4
+    name: "小茴香"
+    category: "香辛料"
+  - id: 5
+    name: "小蓟"
+    category: "草药"
+  - id: 6
+    name: "山药"
+    category: "根茎类"
+  - id: 7
+    name: "山楂"
+    category: "果实类"
+    note: "常用，消食化积"
+  - id: 8
+    name: "马齿苋"
+    category: "野菜"
+  - id: 9
+    name: "乌梢蛇"
+    category: "动物类"
+  - id: 10
+    name: "乌梅"
+    category: "果实类"
+  - id: 11
+    name: "木瓜"
+    category: "果实类"
+  - id: 12
+    name: "火麻仁"
+    category: "种子类"
+    note: "润肠通便"
+  - id: 13
+    name: "代代花"
+    category: "花类"
+  - id: 14
+    name: "玉竹"
+    category: "根茎类"
+  - id: 15
+    name: "甘草"
+    category: "根茎类"
+    note: "⚠️ 甘草酸限量≤100mg/天"
+    v21_warning: "本配方含甘草，需计算甘草酸含量"
+  - id: 16
+    name: "白芷"
+    category: "根茎类"
+  - id: 17
+    name: "白果"
+    category: "果实类"
+  - id: 18
+    name: "白扁豆"
+    category: "豆类"
+  - id: 19
+    name: "白扁豆花"
+    category: "花类"
+  - id: 20
+    name: "龙眼肉"
+    alias: "桂圆"
+    category: "果实类"
+  - id: 21
+    name: "决明子"
+    category: "种子类"
+  - id: 22
+    name: "百合"
+    category: "根茎类"
+  - id: 23
+    name: "肉豆蔻"
+    category: "香辛料"
+  - id: 24
+    name: "肉桂"
+    category: "香辛料"
+  - id: 25
+    name: "余甘子"
+    category: "果实类"
+  - id: 26
+    name: "佛手"
+    category: "果实类"
+  - id: 27
+    name: "杏仁"
+    note: "甜、苦两种，苦杏仁需谨慎"
+    category: "种子类"
+  - id: 28
+    name: "沙棘"
+    category: "果实类"
+  - id: 29
+    name: "牡蛎"
+    category: "动物类"
+  - id: 30
+    name: "芡实"
+    category: "种子类"
+  - id: 31
+    name: "花椒"
+    category: "香辛料"
+  - id: 32
+    name: "赤小豆"
+    category: "豆类"
+  - id: 33
+    name: "阿胶"
+    category: "动物类"
+  - id: 34
+    name: "鸡内金"
+    category: "动物类"
+  - id: 35
+    name: "麦芽"
+    category: "谷物类"
+  - id: 36
+    name: "昆布"
+    category: "海藻类"
+  - id: 37
+    name: "枣"
+    note: "大枣、酸枣、黑枣"
+    category: "果实类"
+  - id: 38
+    name: "罗汉果"
+    category: "果实类"
+  - id: 39
+    name: "郁李仁"
+    category: "种子类"
+    v21_note: "V2.1用于替换桃仁，润肠通便"
+    toxic: "苦杏仁苷0.5%，需控制温度≤80℃"
+    contraindications: ["孕妇禁用"]
+  - id: 40
+    name: "金银花"
+    category: "花类"
+  - id: 41
+    name: "青果"
+    category: "果实类"
+  - id: 42
+    name: "鱼腥草"
+    category: "草药"
+  - id: 43
+    name: "姜"
+    note: "生姜、干姜"
+    category: "香辛料"
+  - id: 44
+    name: "枳椇子"
+    category: "果实类"
+  - id: 45
+    name: "枸杞子"
+    category: "果实类"
+  - id: 46
+    name: "栀子"
+    category: "果实类"
+  - id: 47
+    name: "砂仁"
+    category: "香辛料"
+  - id: 48
+    name: "胖大海"
+    category: "果实类"
+  - id: 49
+    name: "茯苓"
+    category: "菌类"
+  - id: 50
+    name: "香橼"
+    category: "果实类"
+  - id: 51
+    name: "香薷"
+    category: "草药"
+  - id: 52
+    name: "桃仁"
+    category: "种子类"
+    v21_note: "⚠️ 不在2021版目录，需替换"
+    alternatives: ["郁李仁", "红花", "当归"]
+  - id: 53
+    name: "桑叶"
+    category: "叶类"
+  - id: 54
+    name: "桑椹"
+    category: "果实类"
+  - id: 55
+    name: "桔红"
+    category: "果实类"
+  - id: 56
+    name: "桔梗"
+    category: "根茎类"
+  - id: 57
+    name: "益智仁"
+    category: "香辛料"
+  - id: 58
+    name: "荷叶"
+    category: "叶类"
+  - id: 59
+    name: "莱菔子"
+    category: "种子类"
+  - id: 60
+    name: "莲子"
+    category: "种子类"
+  - id: 61
+    name: "高良姜"
+    category: "香辛料"
+  - id: 62
+    name: "淡竹叶"
+    category: "叶类"
+  - id: 63
+    name: "淡豆豉"
+    category: "发酵类"
+  - id: 64
+    name: "菊花"
+    category: "花类"
+  - id: 65
+    name: "菊苣"
+    category: "草药"
+  - id: 66
+    name: "黄芥子"
+    category: "种子类"
+  - id: 67
+    name: "黄精"
+    category: "根茎类"
+  - id: 68
+    name: "紫苏"
+    category: "香草"
+  - id: 69
+    name: "紫苏籽"
+    category: "种子类"
+  - id: 70
+    name: "葛根"
+    category: "根茎类"
+  - id: 71
+    name: "黑芝麻"
+    category: "种子类"
+  - id: 72
+    name: "黑胡椒"
+    category: "香辛料"
+  - id: 73
+    name: "槐花"
+    category: "花类"
+  - id: 74
+    name: "槐米"
+    category: "花类"
+  - id: 75
+    name: "蒲公英"
+    category: "草药"
+  - id: 76
+    name: "蜂蜜"
+    category: "动物类"
+  - id: 77
+    name: "榧子"
+    category: "果实类"
+  - id: 78
+    name: "酸枣仁"
+    category: "种子类"
+    note: "常用，养心安神"
+  - id: 79
+    name: "鲜白茅根"
+    category: "根茎类"
+  - id: 80
+    name: "鲜芦根"
+    category: "根茎类"
+  - id: 81
+    name: "蝮蛇"
+    category: "动物类"
+  - id: 82
+    name: "橘皮"
+    category: "果实类"
+  - id: 83
+    name: "薄荷"
+    category: "香草"
+  - id: 84
+    name: "薏苡仁"
+    category: "谷物类"
+  - id: 85
+    name: "薤白"
+    category: "蔬菜"
+  - id: 86
+    name: "覆盆子"
+    category: "果实类"
+  - id: 87
+    name: "藿香"
+    category: "香草"
+
+---
+# 2019年新增（6种）
+herbs_2019:
+  - id: 88
+    name: "当归"
+    date_added: "2019-11-25"
+    category: "根茎类"
+    note: "补血活血，V2.1可用于替换桃仁"
+    v21_alternative_for: "桃仁"
+    
+  - id: 89
+    name: "山柰"
+    date_added: "2019-11-25"
+    category: "香辛料"
+    
+  - id: 90
+    name: "西红花"
+    alias: "藏红花"
+    date_added: "2019-11-25"
+    category: "花类"
+    note: "⚠️ 活血力强，孕妇禁用"
+    contraindications: ["孕妇禁用"]
+    v21_alternative_for: "桃仁"
+    
+  - id: 91
+    name: "草果"
+    date_added: "2019-11-25"
+    category: "香辛料"
+    
+  - id: 92
+    name: "姜黄"
+    date_added: "2019-11-25"
+    category: "香辛料"
+    
+  - id: 93
+    name: "荜茇"
+    date_added: "2019-11-25"
+    category: "香辛料"
+
+---
+# 2023年新增（9种）
+herbs_2023:
+  - id: 94
+    name: "党参"
+    date_added: "2023-11-09"
+    category: "根茎类"
+    note: "补中益气"
+    
+  - id: 95
+    name: "肉苁蓉"
+    alias: "荒漠肉苁蓉"
+    date_added: "2023-11-09"
+    category: "根茎类"
+    note: "补肾阳，益精血"
+    
+  - id: 96
+    name: "铁皮石斛"
+    date_added: "2023-11-09"
+    category: "草药"
+    note: "益胃生津，滋阴清热"
+    
+  - id: 97
+    name: "西洋参"
+    date_added: "2023-11-09"
+    category: "根茎类"
+    note: "补气养阴，清热生津"
+    
+  - id: 98
+    name: "黄芪"
+    date_added: "2023-11-09"
+    category: "根茎类"
+    note: "常用，补气升阳"
+    v21_note: "本配方含黄芪，注意不与五灵脂同用"
+    
+  - id: 99
+    name: "灵芝"
+    date_added: "2023-11-09"
+    category: "菌类"
+    note: "补气安神"
+    
+  - id: 100
+    name: "山茱萸"
+    date_added: "2023-11-09"
+    category: "果实类"
+    note: "补益肝肾"
+    
+  - id: 101
+    name: "天麻"
+    date_added: "2023-11-09"
+    category: "根茎类"
+    note: "息风止痉，平抑肝阳"
+    
+  - id: 102
+    name: "杜仲叶"
+    date_added: "2023-11-09"
+    category: "叶类"
+    note: "补肝肾，强筋骨"
+
+---
+# 2024年新增（4种）
+herbs_2024:
+  - id: 103
+    name: "地黄"
+    date_added: "2024-08-26"
+    category: "根茎类"
+    note: "清热凉血，养阴生津"
+    
+  - id: 104
+    name: "麦冬"
+    date_added: "2024-08-26"
+    category: "根茎类"
+    note: "养阴润肺，益胃生津"
+    v21_note: "可配伍用于阴虚体质"
+    
+  - id: 105
+    name: "天冬"
+    date_added: "2024-08-26"
+    category: "根茎类"
+    note: "养阴润燥，清肺生津"
+    
+  - id: 106
+    name: "化橘红"
+    date_added: "2024-08-26"
+    category: "果实类"
+    note: "理气宽中，燥湿化痰"
+
+---
+# 快速查询索引
+
+## 按类别分类
+categories:
+  香辛料: ["丁香", "八角茴香", "小茴香", "肉桂", "肉豆蔻", "姜", "高良姜", "砂仁", "草果", "姜黄", "荜茇", "山柰"]
+  果实类: ["山楂", "乌梅", "木瓜", "龙眼肉", "枸杞子", "栀子", "桑椹", "覆盆子", "酸枣仁"]
+  种子类: ["火麻仁", "决明子", "杏仁", "郁李仁", "桃仁", "莱菔子", "莲子", "黑芝麻"]
+  根茎类: ["山药", "玉竹", "甘草", "白芷", "百合", "葛根", "黄精", "当归", "党参", "黄芪", "地黄", "麦冬", "天冬"]
+  草药: ["小蓟", "马齿苋", "鱼腥草", "蒲公英", "菊苣"]
+  花类: ["代代花", "金银花", "菊花", "槐花", "西红花"]
+  叶类: ["桑叶", "荷叶", "淡竹叶", "杜仲叶"]
+  动物类: ["乌梢蛇", "阿胶", "鸡内金", "牡蛎", "蜂蜜", "蝮蛇"]
+
+## V2.1特别关注
+v21_key_herbs:
+  郁李仁:
+    status: "✅ 收录"
+    replaces: "桃仁"
+    toxic: "苦杏仁苷0.5%"
+    control: "温度≤80℃，检测氰化物"
+    
+  甘草:
+    status: "✅ 收录"
+    limit: "甘草酸≤100mg/天"
+    v21_dosage: "2.5g/包（125mg甘草酸）"
+    
+  桃仁:
+    status: "❌ 未收录"
+    alternatives: ["郁李仁", "当归", "西红花"]
+    
+  当归:
+    status: "✅ 收录（2019）"
+    v21_alternative: "可用于替换桃仁，补血活血"
+    
+  西红花:
+    status: "✅ 收录（2019）"
+    v21_alternative: "可用于替换桃仁，活血力强"
+    warning: "孕妇禁用"
+
+## 孕妇禁用清单
+pregnancy_contraindicated:
+  absolute: ["郁李仁", "西红花", "桃仁（如使用）"]
+  cautious: ["当归", "红花"]
